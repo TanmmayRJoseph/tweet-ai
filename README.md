@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TweetMuse 🎭
+
+AI-powered Tweet Generator that matches your mood. Instantly create funny, sarcastic, or motivational tweets and save your tweet history. Built with Next.js, Drizzle ORM, Neon Postgres, and Google Gemini AI.
+
+## Features
+
+- **Mood-Based Tweets:** Generate tweets based on moods like Funny, Motivational, or Sarcastic.
+- **Instant Generation:** Tweets are crafted instantly using Google Gemini AI.
+- **Save & Manage Tweets:** View, filter, and delete your tweet history.
+- **Authentication:** Secure signup, login, and profile management.
+- **Responsive UI:** Optimized for mobile and desktop.
+- **Share & Copy:** Easily copy or share tweets to X (Twitter).
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [Drizzle ORM](https://orm.drizzle.team/)
+- [Neon Postgres](https://neon.tech/)
+- [Google Gemini AI](https://ai.google.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Radix UI](https://www.radix-ui.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [JWT Authentication](https://jwt.io/)
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repository
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```sh
+git clone https://github.com/your-username/tweet-ai.git
+cd tweet-ai
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Configure environment variables
 
-## Learn More
+Copy `envsample` to `.env` and fill in your credentials:
 
-To learn more about Next.js, take a look at the following resources:
+```
+DATABASE_URL=your_postgres_url
+NODE_ENV=development
+GOOGLE_API_KEY=your_google_gemini_api_key
+JWT_SECRET=your_jwt_secret
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Run database migrations
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```sh
+npx drizzle-kit push
+```
 
-## Deploy on Vercel
+### 5. Start the development server
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```sh
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Usage
+
+- **Try Now:** Go to `/pages/dashboard` to generate tweets.
+- **Login/Signup:** Access `/pages/login` or `/pages/signup` for authentication.
+- **Profile:** View your info at `/pages/profile`.
+- **History:** Manage your tweets at `/pages/history`.
+
+## Project Structure
+
+- `src/app/` – Next.js app routes and pages
+- `src/components/` – UI and feature components
+- `src/db/` – Database schema and Drizzle ORM setup
+- `src/utils/` – Utility functions and AI integration
+- `drizzle/` – Migration files
+
+## Contributing
+
+Contributions are welcome! Please open issues or submit pull requests.
+
+## License
+
+MIT
+
+---
+
+Built with ❤️ by
