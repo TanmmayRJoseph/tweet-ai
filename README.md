@@ -28,7 +28,7 @@ AI-powered Tweet Generator that matches your mood. Instantly create funny, sarca
 ### 1. Clone the repository
 
 ```sh
-git clone https://github.com/your-username/tweet-ai.git
+git clone https://github.com/TanmmayRJoseph/tweet-ai
 cd tweet-ai
 ```
 
